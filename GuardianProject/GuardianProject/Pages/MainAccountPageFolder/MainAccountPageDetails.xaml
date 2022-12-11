@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuardianProject.Pages.MainAccountPageFolder.MainAccountPageDetails"
+             xmlns:local="clr-namespace:GuardianProject.Pages.MainAccountPageFolder" x:DataType="local:MainAccoutPageModelView"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.BindingContext>
+        <local:MainAccoutPageModelView/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Frame
+            x:Name="frame_MainFrame"
+            BackgroundColor="LightCyan"
+            Padding="0" 
+            Margin="0"
+            Opacity="0">
+            
+            <StackLayout
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand">
+
+                <Label 
+                    x:Name="lbl_Label"
+                    Text="{local:Translate Text = TransitionText}" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    FontFamily="MeetCute"
+                    FontAttributes="Bold"
+                    TextColor="Black"
+                    TextTransform="Default"
+                    Opacity="0"
+                    FontSize="30"/>
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuardianProject.Pages.LanguagePageFolder.LanguagePage"
+             xmlns:wp="clr-namespace:Vapolia.WheelPickerForms;assembly=Vapolia.WheelPickerForms"
+             xmlns:local="clr-namespace:GuardianProject.Pages.LanguagePageFolder" x:DataType="local:LanguagePageViewModel"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.BindingContext>
+        <local:LanguagePageViewModel/>
+    </ContentPage.BindingContext>
+
+    <Frame  
+        x:Name="frame_MainFrame"
+        BackgroundColor="LightCyan"
+        Padding="0" 
+        Margin="0"
+        CornerRadius="0">
+
+        <StackLayout
+            Orientation="Vertical"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+
+            <Label 
+                Text="{local:Translate Text=SelectLanguage}"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" 
+                FontFamily="MeetCute"
+                FontSize="35"
+                TextColor="Black"
+                Opacity="0"/>
+
+
+            <StackLayout 
+                Orientation="Vertical"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                <Label 
+                    Text="{local:Translate Text=Language} "
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    FontFamily="MeetCute"
+                    FontSize="35"
+                    TextColor="Black"
+                    Opacity="0"/>
+
+                <wp:WheelPicker
+                    ItemsSourceSimple="{Binding Languages, Mode=OneWay}" 
+                    Command="{Binding LanguageSelectedCallback}"
+                    SelectedItemsIndex="{Binding SelectedItemsIndex}"
+                    HorizontalOptions="Fill"
+                    ItemTextSelectedColor="CornflowerBlue"
+                    SelectionLinesColor="LightBlue"
+                    Opacity="0">
+                    <wp:WheelDefinition
+                        Width="*"
+                        HorizontalOptions="Center"
+                        Alignment="Center" 
+                        RowHeight="30">
+                        <DataTemplate x:DataType="local:Language">
+                            <Label 
+                                Text="{Binding Name}"
+                                TextColor="DarkBlue"
+                                FontFamily="MeetCute"
+                                FontSize="25"/>
+                        </DataTemplate>
+                    </wp:WheelDefinition>
+                </wp:WheelPicker>
+           
+            </StackLayout>
+
+            <Button
+                x:Name="btn_ButtonNext"
+                Text="{local:Translate Text=NextButtonText}"
+                BackgroundColor="WhiteSmoke"
+                BorderColor="Gray"
+                BorderWidth="1"
+                FontFamily="MeetCute"
+                FontSize="20"
+                TextColor="Black"
+                Clicked="NextButton_Clicked"
+                Opacity="0"/>
+
+        </StackLayout>
+    </Frame>
+</ContentPage>

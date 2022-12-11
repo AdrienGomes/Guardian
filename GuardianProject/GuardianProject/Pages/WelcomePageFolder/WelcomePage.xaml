@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuardianProject.Pages.WelcomePageFolder.WelcomPage"
+             xmlns:local="clr-namespace:GuardianProject.Pages.WelcomePageFolder"
+             NavigationPage.HasNavigationBar="false">
+
+    <Frame 
+        x:Name="frame_MainFrame"
+        BackgroundColor="LightCyan"
+        Padding="0" 
+        Margin="0"
+        CornerRadius="0">
+        
+        <StackLayout x:Name="stack_MainStackLayout"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            
+            <Label x:Name="lbl_MainLabel"
+                   Text="Welcome !"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="40"
+                   FontFamily="MeetCute"
+                   TextColor="Black"
+                   Opacity="0"/>
+            
+            <Label x:Name=" lbl_SecondLine"
+                   Text="{local:Translate Text = WelcomeText}"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="None"
+                   FontSize="25"
+                   FontFamily="MeetCute"
+                   TextColor="Black"
+                   Opacity="0"/>
+        </StackLayout>
+    </Frame>
+
+</ContentPage>
