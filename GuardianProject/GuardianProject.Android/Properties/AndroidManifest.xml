@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.guardianproject" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.guardianproject" android:installLocation="preferExternal">
 	<uses-sdk android:minSdkVersion="31" android:targetSdkVersion="33" />
 	<uses-permission android:name="android.permission.BATTERY_STATS" />
 	<uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
@@ -15,5 +15,6 @@
 	<uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 	<uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
 	<uses-permission android:name="android.permission.MANAGE_VOICE_KEYPHRASES" />
+	<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
 	<application android:label="Guardian" android:theme="@style/MainTheme" android:icon="@mipmap/Logo_foreground"></application>
 </manifest>

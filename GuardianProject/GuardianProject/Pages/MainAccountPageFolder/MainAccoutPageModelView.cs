@@ -1,5 +1,4 @@
 ﻿using GuardianProject.Common;
-using GuardianProject.Pages.LanguagePageFolder.Resources;
 using GuardianProject.Pages.MainAccountPageFolder.Resources;
 using System;
 using System.ComponentModel;
@@ -36,7 +35,7 @@ namespace GuardianProject.Pages.MainAccountPageFolder
 
         public BindingBase ProvideValue(IServiceProvider serviceProvider)
         {
-            var binding = new Binding
+            Binding binding = new Binding
             {
                 Mode = BindingMode.OneWay,
                 Path = $"[{Text}]",

@@ -61,7 +61,7 @@
                         <DataTemplate x:DataType="local:Language">
                             <Label 
                                 Text="{Binding Name}"
-                                TextColor="DarkBlue"
+                                TextColor="Black"
                                 FontFamily="MeetCute"
                                 FontSize="25"/>
                         </DataTemplate>
@@ -72,10 +72,11 @@
 
             <Button
                 x:Name="btn_ButtonNext"
+                Margin="100,15,100,15"
                 Text="{local:Translate Text=NextButtonText}"
-                BackgroundColor="WhiteSmoke"
-                BorderColor="Gray"
+                BackgroundColor="LightBlue"
                 BorderWidth="1"
+                CornerRadius="30"
                 FontFamily="MeetCute"
                 FontSize="20"
                 TextColor="Black"

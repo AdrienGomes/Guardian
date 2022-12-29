@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:local="clr-namespace:GuardianProject.Pages.MainAccountPageFolder"
-             x:Class="GuardianProject.Pages.MainAccountPageFolder.MainAccountPage">
+             xmlns:local="clr-namespace:GuardianProject.Pages.MainAccountPageFolder" x:DataType="local:MainAccoutPageModelView"
+             x:Class="GuardianProject.Pages.MainAccountPageFolder.MainAccountPage"
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.BindingContext>
         <local:MainAccoutPageModelView/>
     </ContentPage.BindingContext>
@@ -19,16 +20,18 @@
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand">
 
-                <Entry
-                    x:Name="text_Entry"
-                    Text="FullName"
-                    Placeholder="Jean Patrique"
-                    BackgroundColor="LightCyan"
-                    FontFamily="MeetCute"
-                    FontAttributes="Bold"
-                    TextColor="Black"
-                    Opacity="0">
-                </Entry>
+                <Button
+                    x:Name="btn_SoundMeterBtn"
+                    Text="Get Amplitude"
+                    Clicked="Handler_btnSoundMeterClicked"
+                    />
+
+                <Button
+                    x:Name="btn_ShowToastMessageBtn"
+                    Text="Show toast"
+                    Clicked="Handler_btnShowToastMessageClicked"
+                    />
+
             </StackLayout>
         </Frame>
     </ContentPage.Content>
